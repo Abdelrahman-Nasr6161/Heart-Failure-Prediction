@@ -1,0 +1,14 @@
+Decision Tree Classification Results
+====================================
+Best Hyperparameters:
+ - Max Depth: 3
+ - Min Samples Split: 2
+ - PCA n_components: 0.85
+
+Test Set Performance (20% split):
+ - Accuracy: 0.8478
+ - F1-Score: 0.8692
+
+Confusion Matrix:
+[[63 19]
+ [ 9 93]]

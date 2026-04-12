@@ -81,7 +81,6 @@ class DecisionTree:
         # Calculate Information Gain 
         ig = parent_entropy - child_entropy
         return ig
-
     def _split(self, X_column, split_thresh):
         left_idxs = np.argwhere(X_column <= split_thresh).flatten()
         right_idxs = np.argwhere(X_column > split_thresh).flatten()
