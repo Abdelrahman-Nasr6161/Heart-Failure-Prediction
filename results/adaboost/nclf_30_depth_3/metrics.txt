@@ -1,0 +1,14 @@
+AdaBoost Classification Results
+===============================
+Best Hyperparameters:
+ - Number of Estimators: 30
+ - Weak Learner Max Depth: 3
+ - PCA n_components: 0.995
+
+Test Set Performance (20% split):
+ - Accuracy: 0.8424
+ - F1-Score: 0.8543
+
+Confusion Matrix:
+[[70 12]
+ [17 85]]
