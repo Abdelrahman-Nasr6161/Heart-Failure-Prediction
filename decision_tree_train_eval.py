@@ -19,7 +19,6 @@ n_components_vals = [0.85, 0.9, 0.95, 0.995]
 
 print("Tuning Decision Tree Hyperparameters...")
 for depth, min_samples, n_components in itertools.product(depths, min_samples_split_vals, n_components_vals):
-    # Using fixed random seed 42 and stratified split (70/10/20)
     X_train, X_val, X_test, y_train, y_val, y_test = load_and_preprocess('data/heart.csv', n_components, True)
     
     dt = DecisionTree(max_depth=depth, min_samples_split=min_samples)
@@ -47,17 +46,13 @@ final_model.fit(X_train, y_train)
 # Test only on the unseen test set
 y_pred = final_model.predict(X_test)
 
-# Compute mandatory performance metrics 
 acc = accuracy_score(y_test, y_pred) 
 f1 = f1_score(y_test, y_pred) 
 cm = confusion_matrix(y_test, y_pred) 
 
-# --- Directory and File Management ---
-# Create the specific directory for this hyperparameter combination
 result_dir = f'results/decision_tree/depth_{best_depth}_min_{best_min_samples}'
 os.makedirs(result_dir, exist_ok=True)
 
-# Save metrics to text file for the report 
 output_path = os.path.join(result_dir, 'metrics.txt')
 with open(output_path, 'w') as f:
     f.write("Decision Tree Classification Results\n")
@@ -76,11 +71,10 @@ print(f"\nFinal Results on Test Set (20% split)")
 print(f"Accuracy: {acc:.4f}")
 print(f"F1-Score: {f1:.4f}")
 
-# Plot and save Confusion Matrix figure 
 plt.figure(figsize=(6, 4))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
 plt.title(f'Decision Tree Confusion Matrix (Depth {best_depth})')
 plt.ylabel('Actual Label')
 plt.xlabel('Predicted Label')
 plt.savefig(os.path.join(result_dir, 'cm.png'))
-plt.close() # Close figure to free memory
+plt.close()

@@ -71,7 +71,6 @@ print(f"\nFinal Results on Test Set (20% split)")
 print(f"Accuracy: {acc:.4f}")
 print(f"F1-Score: {f1:.4f}")
 
-# Plot and save Confusion Matrix figure 
 plt.figure(figsize=(6, 4))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
 plt.title(f'AdaBoost Confusion Matrix (Est. {best_weak_learner}, Depth {best_depth})')
