@@ -14,7 +14,7 @@ best_depth = 10
 best_n = 0.95
 
 n_estimators_list = [10, 20, 50, 100]
-depths_list = [3, 5, 10, 15]
+depths_list = [3, 5]
 n_components_val_list = [0.85, 0.9, 0.95, 0.995]
 
 print("Tuning Bagging Hyperparameters...")
