@@ -1,0 +1,14 @@
+Bagging Classification Results
+==============================
+Best Hyperparameters:
+ - Number of Estimators: 20
+ - Base Learner Max Depth: 5
+ - PCA n_components: 0.9
+
+Test Set Performance (20% split):
+ - Accuracy: 0.8641
+ - F1-Score: 0.8815
+
+Confusion Matrix:
+[[66 16]
+ [ 9 93]]
