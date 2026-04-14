@@ -1,0 +1,15 @@
+Parallel Random Forest Classification Results
+====================================
+training time : 189.1322 seconds
+Best Hyperparameters:
+ - Max Depth: 5
+ - Min Samples Split: 2
+ - PCA n_components: 0.9
+
+Test Set Performance (20% split):
+ - Accuracy: 0.8370
+ - F1-Score: 0.8544
+
+Confusion Matrix:
+[[66 16]
+ [14 88]]
