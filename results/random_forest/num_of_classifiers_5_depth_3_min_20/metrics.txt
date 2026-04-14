@@ -1,0 +1,15 @@
+Random Forest Classification Results
+====================================
+training time : 1012.3688 seconds
+Best Hyperparameters:
+ - Max Depth: 3
+ - Min Samples Split: 20
+ - PCA n_components: 0.95
+
+Test Set Performance (20% split):
+ - Accuracy: 0.8750
+ - F1-Score: 0.8889
+
+Confusion Matrix:
+[[69 13]
+ [10 92]]
